@@ -33,7 +33,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onNextButtonClick(View view) {
-        finish();
-    }
+
 }
