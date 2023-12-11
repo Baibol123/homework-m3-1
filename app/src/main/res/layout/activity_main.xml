@@ -10,62 +10,38 @@
     >
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Вход"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="23dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Добро пожаловать!"
-        android:textSize="35dp"
-        app:layout_constraintVertical_bias="0.37"
+        android:text="Homework"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       />
+        android:textSize="26dp"
+        />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Выполните вход \nили зарегистрируйтесь"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        android:gravity="center"
-        android:paddingBottom="52dp"
-         />
 
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="334dp"
         android:layout_height="62dp"
         android:ems="10"
+        android:drawableStart="@drawable/ic_mail"
+        android:paddingVertical="10dp"
+
         android:inputType="text"
-        android:hint="Введите вашу почту"
+        android:hint="Email"
         android:paddingStart="20dp"
         android:textColor="@color/gray"
         android:background="@drawable/rounded"
-
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="10dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextText2"
@@ -73,43 +49,54 @@
         android:layout_height="62dp"
         android:ems="10"
         android:layout_marginTop="17dp"
-        android:inputType="textPassword"
-
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_theme"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
         android:paddingStart="20dp"
-        android:hint="Введите пароль"
+        android:hint="Theme"
         android:textColor="@color/gray"
         android:background="@drawable/rounded"
         app:layout_constraintEnd_toEndOf="@+id/editTextText"
         app:layout_constraintStart_toStartOf="@+id/editTextText"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/editTextText3"
         android:layout_width="334dp"
         android:layout_height="62dp"
-        android:text="Войти"
+        android:ems="10"
+        android:layout_marginTop="17dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_message"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+
+        android:paddingStart="20dp"
+        android:hint="Text"
+        android:textColor="@color/gray"
+        android:background="@drawable/rounded"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+    <Button
+        android:onClick="buttonSend"
+        android:textAllCaps="true"
+        android:id="@+id/button_send"
+
+        android:layout_width="334dp"
+        android:layout_height="62dp"
+        android:text="Send"
         android:background="@drawable/bg_button"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_marginTop="17dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
 
         />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Забыл пароль?"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@id/button"
-        android:paddingStart="50dp"
-        android:paddingTop="15dp"
 
-        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
